@@ -6,6 +6,8 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+always do gem update --system
+#ruby - v : 3.0.4 //2022
 
 * System dependencies
 

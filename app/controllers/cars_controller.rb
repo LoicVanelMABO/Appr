@@ -8,6 +8,7 @@ class CarsController < ApplicationController
 
   # GET /cars/1 or /cars/1.json
   def show
+    @cars = Car.find(parameters[:id])
   end
 
   # GET /cars/new
@@ -25,11 +26,16 @@ class CarsController < ApplicationController
 
     respond_to do |format|
       if @car.save
+        flash[:success] = "Great! your car has been created!"
+        #flash[:notice] = "Great! your car has been created!"
         format.html { redirect_to car_url(@car), notice: "Car was successfully created." }
         format.json { render :show, status: :created, location: @car }
       else
+        #flash.now[:error] = "Could not save client"
+        #render action: "new"
+        flash[:error] = "Have to fix your mixtakes, plz"
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @car.errors, status: :unprocessable_entity }
+        format.json { render json: @car.errors, status: :unprocessable_entity }        
       end
     end
   end

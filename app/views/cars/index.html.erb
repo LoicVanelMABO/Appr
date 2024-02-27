@@ -12,3 +12,12 @@
 </div>
 
 <%= link_to "New car", new_car_path %>
+
+#FLASH----
+<% flash.each do |name, msg| -%>
+  <%= content_tag :dv, msg, class: name %>
+<% end -%>
+
+<% if flash[:just_signed_up] %>
+  <p class="welcome">Welcome to our site!</p>
+<% end %>
