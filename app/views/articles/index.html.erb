@@ -1,0 +1,16 @@
+<html>
+<body>
+    <ul>
+        <% @articles.each do |article| %>
+            <li>
+                <a href="<%= article_path(article) %>">
+                    <%= article.title %>
+                <a/>  
+                <%= link_to article.title,article %>
+            </li>
+        <% end %>
+    </ul>
+
+    <%= link_to "New Article", new_article_path %>
+</body>
+</html>
