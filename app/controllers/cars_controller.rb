@@ -5,7 +5,7 @@ class CarsController < ApplicationController
   def index
     @cars = Car.all
   end
-
+  
   # GET /cars/1 or /cars/1.json
   def show
     @cars = Car.find(parameters[:id])

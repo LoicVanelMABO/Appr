@@ -23,4 +23,26 @@ always do gem update --system
 
 * Deployment instructions
 
+* creation d'un controleur sans routes
+    rails generate controller Articles index --skip-routes
+
+* creation d'un model
+    rails generate model Article title:string body:text 
+    rails generate model Comment commenter:string body:text article:references(type reference c'est pour les cle etrangère)
+
+
+* pour executer et creer et ajouter les entités dans la base de donnees
+    rails db:migrate
+
+    # pour interagir avec la bd
+    rails console pour a partir du terminal l'interface de la BD
+    Après 
+    -article = Article.new(title: "Hello Rails", body: "I am on Rails!")
+    -article.save
+    Article.find(1)
+    Article.all
+
+
+
+
 * ...
