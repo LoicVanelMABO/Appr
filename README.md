@@ -42,6 +42,10 @@ always do gem update --system
     Article.find(1)
     Article.all
 
+* Lorsque tu veux modifier ou ajouter un truc dans la bd(ajouter une colonne // une cle etrangère a une table)
+    -creer une nouvelle migration
+    a l'intérieur de laquelle faire les modifications.
+
 
 
 
