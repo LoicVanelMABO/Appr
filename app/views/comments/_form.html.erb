@@ -1,0 +1,15 @@
+<h2>Add Comment:</h2>
+<%= form_with model: [@article, @article.comments.build] do |form| %>
+    <p>
+        <%= form.label :comment %><br>
+        <%= form.text_field :commenter %>
+    </p>
+
+    <p>
+        <%= form.label :body %><br>
+        <%= form.text_field :body %>
+    </p>
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>

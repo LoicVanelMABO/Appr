@@ -43,7 +43,7 @@ class ArticlesController < ApplicationController
 
 
   private 
-   def article_params
+  def article_params
     params.require(:article).permit(:title, :body,:price,:devise_id)
   end
 end
